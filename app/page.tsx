@@ -3,7 +3,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Interests from "@/components/Interests";
-import TechStack from "@/components/TechStack";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
@@ -20,7 +19,6 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Interests />
-      <TechStack />
       <Experience />
       <Projects />
       <Skills />
