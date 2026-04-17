@@ -117,16 +117,25 @@ export default function Contact() {
             href={c.href}
             target={c.href.startsWith("http") ? "_blank" : undefined}
             rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
+            aria-label={
+              c.label === "Email"
+                ? `Enviar email para Renan Felix: ${c.value}`
+                : c.label === "Telefone"
+                ? `Ligar para Renan Felix: ${c.value}`
+                : c.label === "GitHub"
+                ? `Perfil do GitHub de Renan Felix (${c.value}), abre em nova aba`
+                : `Localização de Renan Felix: ${c.value}`
+            }
             className="contact-card group border border-gray-800 p-5 bg-black/20 hover:border-cyan-500/30 hover:bg-cyan-500/[0.02] transition-all duration-300 flex items-center gap-4"
           >
-            <div className="text-gray-600 group-hover:text-cyan-400 transition-colors duration-300">
+            <div aria-hidden="true" className="text-gray-600 group-hover:text-cyan-400 transition-colors duration-300">
               {c.icon}
             </div>
             <div>
               <div className="font-mono text-[10px] text-gray-600 tracking-widest uppercase mb-0.5">{c.label}</div>
               <div className="text-gray-300 group-hover:text-white transition-colors text-sm font-medium">{c.value}</div>
             </div>
-            <div className="ml-auto text-gray-700 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-300 font-mono">
+            <div aria-hidden="true" className="ml-auto text-gray-700 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all duration-300 font-mono">
               →
             </div>
           </a>
@@ -143,7 +152,7 @@ export default function Contact() {
           </p>
         </div>
         <div className="flex items-center gap-1">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+          <span aria-hidden="true" className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
           <span className="font-mono text-[10px] text-gray-700">disponível para oportunidades</span>
         </div>
       </div>

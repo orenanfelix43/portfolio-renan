@@ -100,7 +100,7 @@ export default function Skills() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="stack" className="py-28 bg-white/[0.015]">
+    <section ref={sectionRef} id="stack" aria-label="Stack técnica de Renan Felix" className="py-28 bg-white/[0.015]">
       <div className="max-w-6xl mx-auto px-8 md:px-16">
         <p className="section-label-skills font-mono text-xs tracking-[0.3em] text-gray-600 uppercase mb-4">
           // 04 — Stack Técnica
@@ -127,7 +127,13 @@ export default function Skills() {
                         <span className="text-gray-400 text-sm font-medium">{skill.name}</span>
                         <span className="font-mono text-xs text-gray-700">{skill.level}%</span>
                       </div>
-                      <div className="h-px bg-gray-800 relative overflow-hidden">
+                      <div className="h-px bg-gray-800 relative overflow-hidden"
+                        role="progressbar"
+                        aria-label={`${skill.name}: ${skill.level}% de proficiência`}
+                        aria-valuenow={skill.level}
+                        aria-valuemin={0}
+                        aria-valuemax={100}
+                      >
                         <div
                           className={`skill-bar-fill h-full ${accent.bar} opacity-70 absolute top-0 left-0`}
                           data-level={skill.level}

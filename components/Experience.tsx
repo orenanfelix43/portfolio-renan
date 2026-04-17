@@ -126,7 +126,7 @@ export default function Experience() {
   }, []);
 
   return (
-    <section ref={sectionRef} id="experience" className="py-28 bg-white/[0.015]">
+    <section ref={sectionRef} id="experience" aria-label="Experiência profissional de Renan Felix" className="py-28 bg-white/[0.015]">
       <div className="max-w-6xl mx-auto px-8 md:px-16">
         <p className="section-label-exp font-mono text-xs tracking-[0.3em] text-gray-600 uppercase mb-4">
           // 02 — Experiência
@@ -173,7 +173,7 @@ export default function Experience() {
               >
                 {exp.type === "current" && (
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    <span aria-hidden="true" className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                     <span className="font-mono text-[10px] text-emerald-400 tracking-widest uppercase">Posição atual</span>
                   </div>
                 )}

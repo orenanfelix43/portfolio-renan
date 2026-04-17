@@ -43,6 +43,7 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
+      aria-label="Navegação principal"
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
       style={{
         background: scrolled ? "rgba(3,3,3,0.92)" : "transparent",
@@ -73,6 +74,7 @@ export default function Navbar() {
         {/* CTA */}
         <a
           href="mailto:renan.d2109@gmail.com"
+          aria-label="Status: disponível para oportunidades — clique para enviar um email para Renan"
           className="hidden md:flex items-center gap-2 font-mono text-xs text-gray-500 hover:text-cyan-400 transition-colors border border-gray-800 hover:border-cyan-500/40 px-4 py-2"
         >
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
